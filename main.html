@@ -53,6 +53,7 @@
       <div class="intro-right">
         <p class="intro-subtitle">Junior Frontend Developer</p>
         <div class="intro-buttons">
+<!--          TODO: Change a tag to button tag-->
           <a class="button button-vmp" href="#projects">My Projects</a>
           <a class="button button-contact" href="#contact">Contact</a>
         </div>
@@ -157,6 +158,7 @@
   <section id="projects" class="projects">
     <h2 class="section-title">My projects</h2>
     <div class="project-filters">
+<!--      <button class="filter-btn active" data-filter="all" onclick="showFilteredProjects('all')">All</button>-->
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="html-css-js">HTML/CSS/JS</button>
       <button class="filter-btn" data-filter="python">Python</button>
@@ -272,6 +274,7 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label>
+<!--            TODO: add email validation onBlur - czyli kiedy wychodzimy z inputa-->
             <input id="email" type="email" name="email" required />
             <span class="error-message"></span>
           </div>
@@ -285,6 +288,7 @@
             <textarea id="message" name="message" rows="5" required></textarea>
             <span class="error-message"></span>
           </div>
+<!--          TODO: console.log values from form-->
           <button class="btn btn-primary" type="submit">Send Message</button>
         </form>
       </div>
