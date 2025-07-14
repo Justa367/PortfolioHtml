@@ -31,6 +31,15 @@ section {
   padding: 80px 0;
 }
 
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
 /* ---------------- Section: Navigation ----------------*/
 
 .navgbar {
@@ -74,6 +83,11 @@ section {
   transition: color 0.3s ease;
 }
 
+.navg-link:hover,
+.navg-link.active {
+  color: var(--primary-color);
+}
+
 .navg-link::after {
   content: "";
   position: absolute;
@@ -83,6 +97,11 @@ section {
   height: 2px;
   background: var(--primary-color);
   transition: width 0.3s ease;
+}
+
+.navg-link:hover::after,
+.navg-link.active::after {
+  width: 100%;
 }
 
 .navg-logo a {
@@ -198,6 +217,17 @@ section {
   gap: 1rem;
 }
 
+.button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .button-vmp,
 .button-contact {
   padding: 0.75rem 1.5rem;
@@ -207,16 +237,26 @@ section {
 }
 
 .button-vmp {
-  background-color: var(--background-white);
-  color: var(--primary-color);
+  background: var(--secondary-color);
+  color: var(--text-dark);
 }
 
 .button-contact {
-  border: 2px solid var(--background-white);
-  color: var(--background-white);
+  background: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
-/*Intro Image Card*/
+.button-vmp::hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 211, 153, 0.4);
+}
+
+.button-contact::hover {
+  background: white;
+  color: var(--primary-color);
+}
 
 .intro-card img {
   width: 250px;
@@ -248,11 +288,13 @@ section {
 }
 
 .about-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 1.5rem;
   color: var(--text-medium);
 }
@@ -273,11 +315,21 @@ section {
   justify-content: space-between;
 }
 
+.skill-category h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
 .skill-items {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.skill-name {
+  font-size: 1.15rem;
 }
 
 .skill-bar {
@@ -291,7 +343,7 @@ section {
 .skill-progess {
   height: 100%;
   background-color: var(--accent-light);
-  transition: width 0.5s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 /* ---------------- Section: Skills ----------------*/
@@ -319,14 +371,20 @@ section {
 
 /* Project section */
 
+.projects {
+  background: var(--background-light);
+}
+
 .project-image {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
 .project-image img {
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -344,6 +402,11 @@ section {
   width: 25rem;
   display: flex;
   flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px var(--shadow-green);
 }
 
 .project-overlay {
@@ -396,4 +459,170 @@ section {
   font-weight: 500;
 }
 
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(16, 185, 129, 0.05);
+}
+
 /* ---------------- Section: Contact ----------------*/
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.contact-details {
+  margin-top: 1rem;
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+  color: var(--text-medium);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item strong {
+  color: var(--text-dark);
+  margin-right: 0.5rem;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.contact-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--text-dark);
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.contact-info p {
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.25rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-top: 1.65rem;
+}
+
+.social-link img {
+  width: 2rem;
+  height: 2rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #111;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+/* ---------------- Section: footer ----------------*/
+
+.footer {
+  background: var(--text-dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
