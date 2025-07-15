@@ -16,7 +16,7 @@
   <nav class="navgbar">
     <div class="navg-container">
       <div class="navg-left">
-        <div class="hamburger">
+        <div class="hamburger" onclick="showMobileMenu()">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -39,25 +39,28 @@
         </li>
       </ul>
     </div>
+    <div id="navgMenu" class="navg-menu-mobile hidden">cos tam</div>
   </nav>
 
   <!-- Intro Section -->
   <section id="home" class="intro">
     <div class="intro-content">
-      <div class="intro-left">
-        <h1 class="intro-title">Hi! I'm <span class="highlight">Justyna</span></h1>
-        <p class="intro-description">Description</p>
-      </div>
-
-      <div class="intro-right">
-        <p class="intro-subtitle">Junior Frontend Developer</p>
-        <div class="intro-buttons">
-          <button class="button button-vmp" id="scrollToProjects" onclick="scrollToSection('#projects')">My
-            Projects</button>
-          <button class="button button-contact" id="scrollToContact"
-            onclick="scrollToSection('#contact')">Contact</button>
+<!--      <div class="intro-details">-->
+        <div class="intro-left">
+          <h1 class="intro-title">Hi! I'm <span class="highlight">Justyna</span></h1>
+          <p class="intro-description">Description</p>
         </div>
-      </div>
+
+        <div class="intro-right">
+          <p class="intro-subtitle">Junior Frontend Developer</p>
+          <div class="intro-buttons">
+            <button class="button button-vmp" id="scrollToProjects" onclick="scrollToSection('#projects')">My
+              Projects</button>
+            <button class="button button-contact" id="scrollToContact"
+              onclick="scrollToSection('#contact')">Contact</button>
+          </div>
+        </div>
+<!--      </div>-->
 
       <div class="intro-card">
         <img src="img/user.png" alt="img" />

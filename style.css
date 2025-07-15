@@ -2,7 +2,6 @@
 /*TODO: change project-card border radius to 8px*/
 
 /*RWD*/
-/*TODO: Skills and Tech - jedno pod drugim*/
 /*TODO: Home - dostosować pod małe rozdzielczosci iPhone SE*/
 
 * {
@@ -66,6 +65,15 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/*TODO: make mobile menu with transition when open and close*/
+.navg-menu-mobile {
+  display: block;
+}
+
+.navg-menu-mobile.hidden {
+    display: none;
 }
 
 /* navigation menu */
@@ -653,6 +661,7 @@ textarea {
   align-items: center;
   height: 200px;
   position: relative;
+  margin-top: 24px;
 }
 
 .project-image img {

@@ -243,5 +243,10 @@ document.getElementById("scrollToContact").addEventListener("click", () => {
 });
 */
 
+function showMobileMenu() {
+  const mobileMenu = document.getElementById("navgMenu");
+  mobileMenu.classList.toggle("hidden");
+}
+
 
 
