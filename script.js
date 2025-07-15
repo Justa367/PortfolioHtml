@@ -1,9 +1,7 @@
 // Project list
 
 const projects = [
-    //TODO:
     {
-        //TODO:
         img: '/img/web-development.png',
         title: 'Website 1',
         description: "Description 1",
@@ -11,7 +9,6 @@ const projects = [
         link: "https://www.youtube.com/",
     },
     {
-        //TODO:
         img: '/img/deep-learning.png',
         title: 'Yolo custom detection',
         description: "Description 2",
@@ -19,7 +16,6 @@ const projects = [
         link: "https://www.youtube.com/",
     },
     {
-        //TODO:
         img: '/img/project.png',
         title: 'Python',
         description: "Description 3",
@@ -69,7 +65,6 @@ const showProjects = (projectsToDisplay) => {
 
 showProjects(projects);
 
-//TODO: Change styles for clicked and not clicked buttons
 document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
         const filterValue = button.getAttribute('data-filter');
@@ -190,11 +185,11 @@ function validateEmail(inputElement) {
   const isValid = atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1;
 
   const messageElement=document.getElementById("emailMessage");
-  messageElement.textContent=isValid? "Correct email":"Valid email";
+  messageElement.textContent=isValid? "Correct email":"Invalid email";
   messageElement.className = "error-message " + (isValid ? "valid" : "invalid");
 
   return isValid;
-}S
+}
 
 
 // Using regex

@@ -1,3 +1,10 @@
+/*TODO: fix Github border*/
+/*TODO: change project-card border radius to 8px*/
+
+/*RWD*/
+/*TODO: Skills and Tech - jedno pod drugim*/
+/*TODO: Home - dostosować pod małe rozdzielczosci iPhone SE*/
+
 * {
   margin: 0;
   padding: 0;
@@ -280,12 +287,27 @@ textarea {
 }
 
 /* Also in skill section */
+
+/*od 320px do nast media query*/
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 0.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: var(--text-dark);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    /*tutaj przeklejam domyślną wartość jaka była na początku dla desktop*/
+    font-size: 2.5rem;
+  }
 }
 
 .about-content {
