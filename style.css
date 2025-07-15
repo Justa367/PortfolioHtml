@@ -618,10 +618,16 @@ textarea {
 }
 
 .error-message {
-  color: #ef4444;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-  display: block;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
 }
 
 .contact-form button {

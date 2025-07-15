@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=decive.width, initial-scale=1.0" />
   <title>Justyna Biernot - Junior Developer</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"
-    href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0I5nvwUgHU.woff2" />
+  <link rel="stylesheet" />
 </head>
 
 </html>
@@ -53,9 +52,11 @@
       <div class="intro-right">
         <p class="intro-subtitle">Junior Frontend Developer</p>
         <div class="intro-buttons">
-<!--          TODO: Change a tag to button tag-->
-          <a class="button button-vmp" href="#projects">My Projects</a>
-          <a class="button button-contact" href="#contact">Contact</a>
+          <!--TODO: Change a tag to button tag-->
+          <button class="button button-vmp" id="scrollToProjects" onclick="scrollToSection('#projects')">My
+            Projects</button>
+          <button class="button button-contact" id="scrollToContact"
+            onclick="scrollToSection('#contact')">Contact</button>
         </div>
       </div>
 
@@ -158,7 +159,7 @@
   <section id="projects" class="projects">
     <h2 class="section-title">My projects</h2>
     <div class="project-filters">
-<!--      <button class="filter-btn active" data-filter="all" onclick="showFilteredProjects('all')">All</button>-->
+      <!--      <button class="filter-btn active" data-filter="all" onclick="showFilteredProjects('all')">All</button>-->
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="html-css-js">HTML/CSS/JS</button>
       <button class="filter-btn" data-filter="python">Python</button>
@@ -266,29 +267,29 @@
             </a>
           </div>
         </div>
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" class="contact-form" onsubmit="readFormData(event)">
           <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" type="text" name="name" required />
+            <input id="name" type="text" name="name" required /> <!--required-->
             <span class="error-message"></span>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-<!--            TODO: add email validation onBlur - czyli kiedy wychodzimy z inputa-->
-            <input id="email" type="email" name="email" required />
-            <span class="error-message"></span>
+            <!--            TODO: add email validation onBlur - czyli kiedy wychodzimy z inputa-->
+            <input id="email" type="email" name="email" onchange="validateEmail(this)" required /> <!--required-->
+            <span id="emailMessage" class="error-message"></span>
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input id="subject" type="text" name="subject" required />
+            <input id="subject" type="text" name="subject" required /> <!--required-->
             <span class="error-message"></span>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea> <!--required-->
             <span class="error-message"></span>
           </div>
-<!--          TODO: console.log values from form-->
+          <!--          TODO: console.log values from form-->
           <button class="btn btn-primary" type="submit">Send Message</button>
         </form>
       </div>
