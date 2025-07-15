@@ -660,7 +660,6 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 200px;
-  position: relative;
   margin-top: 24px;
 }
 
@@ -684,6 +683,7 @@ textarea {
   width: 25rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .project-card:hover {
