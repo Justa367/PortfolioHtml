@@ -244,9 +244,17 @@ document.getElementById("scrollToContact").addEventListener("click", () => {
 */
 
 function showMobileMenu() {
-  const mobileMenu = document.getElementById("navgMenu");
+  const mobileMenu = document.getElementById("navgMenu"); // Taking mobbile menu elements
+  const desktopMenu = document.querySelector(".navg-menu"); // Taking desktop menu elements
+
+  // Chacking if mobile menu is empty
+  if (mobileMenu.innerHTML === "") {
+    mobileMenu.innerHTML = desktopMenu.innerHTML;
+  }
+
   mobileMenu.classList.toggle("hidden");
 }
+
 
 
 
